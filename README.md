@@ -1,86 +1,133 @@
-# 📊 Superstore Sales Performance Analysis (Power BI Project)
+ # 🏬 Retail Superstore Business Performance Analysis (Power BI Case Study)
 
-## 📝 Project Overview
-This project is an **end-to-end Power BI dashboard** analyzing sales, profit, customers, and operations using the **Superstore dataset**.  
-It demonstrates my skills in **Power Query (ETL), Data Modeling, DAX calculations, and Interactive Dashboard Design**.  
-
-The objective was to **convert raw transactional data into actionable business insights** for executives, sales teams, and operations.
-
----
-
-## ⚙️ Skills Showcased
-
-### 🔹 Data Cleaning & Transformation (Power Query)
-- Fixed incorrect **data types** (Dates, Currency, Text).  
-- Created calculated columns:
-  - Year, Quarter, Month, Order Month Key  
-  - Profit Margin %  
-  - Ship Days (Order to Delivery)  
-  - Discount Bands  
-- Merged returns dataset to create **Return Flag**.  
-
-### 🔹 Data Modeling
-- Built a **Star Schema**:
-  - **Fact Table**: Orders  
-  - **Dimension Tables**: Customer, Product, Date, Geography  
-- Created a custom **Date Table** for time intelligence.  
-- Defined relationships for Customers, Products, Shipping SLA, and Dates.  
-
-### 🔹 DAX Measures
-- **Sales & Profit KPIs**: Total Sales, Total Profit, Profit Margin %, Order Count, AOV (Avg Order Value).  
-- **Time Intelligence**: YoY Growth, MoM Growth, Running Totals.  
-- **Operational KPIs**: On-Time %, Avg Ship Days, Return Rate.  
-- **Contribution Metrics**: Sales Share %, Pareto 80/20 analysis.  
-
-### 🔹 Dashboard Design
-- **Page 1 – Executive Overview:** Sales, Profit, YoY trends, Sales by Region & Category.  
-- **Page 2 – Product & Category Deep Dive:** Profitability, Discounts, Top/Bottom Products.  
-- **Page 3 – Geography & Operations:** State-wise Sales, Delivery KPIs, City Leaderboard.  
-- **Page 4 – Customer Insights:** Segmentation, Retention, Pareto Analysis, Top Customers.  
+![Power BI](https://img.shields.io/badge/Tool-PowerBI-yellow)
+![ETL](https://img.shields.io/badge/Process-PowerQuery-blue)
+![Data Modeling](https://img.shields.io/badge/Focus-DataModeling-brightgreen)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
 ---
 
-## 📷 Dashboard Preview
+## 🧾 Project Overview
+This project analyzes retail sales data from the **Superstore dataset** to uncover insights into **sales performance, profitability, customer retention, and operational efficiency**.  
 
-### Page 1 – Executive Overview  
+As a business analyst, my goal was to transform raw transactional data into actionable insights using **Power BI**, demonstrating skills in **ETL (Power Query)**, **Data Modeling**, **DAX**, and **Dashboard Design**.  
+
+The project follows a **case-study framework**:
+> **Ask → Prepare → Model → Analyze → Visualize → Share**
+
+---
+
+## 🎯 Business Objective
+Provide data-driven insights to help management:
+- Understand **regional, category, and customer-level performance**
+- Identify **profitability drivers and inefficiencies**
+- Optimize **returns, shipping, and discount strategies**
+- Support **strategic decision-making** with interactive dashboards
+
+---
+
+## ⚙️ Tools & Skills Used
+
+| Category | Tools/Techniques |
+|-----------|-----------------|
+| Data Cleaning | Power Query (ETL), Data Type Fixing, Column Derivation |
+| Data Modeling | Star Schema Design (Fact + Dimensions), Relationships, Calendar Table |
+| DAX Calculations | Time Intelligence (YoY, MoM), Profit Margin %, On-Time %, Return Rate |
+| Dashboard Design | KPI Cards, Drill-Throughs, Interactive Filters |
+| Visualization | Bar/Line Charts, Maps, Pareto Chart, Scatter, Donut Chart |
+| Business Focus | Sales, Profitability, Returns, Customer Retention, Operations |
+
+---
+
+## 🧱 Data Modeling
+
+A **Star Schema** was implemented in Power BI:
+
+**Fact Table:** Orders  
+**Dimension Tables:** Customers, Products, Date, Geography, Shipping SLA
+
+Relationships were created between Customers, Products, Dates, and Orders to enable time-based and regional analysis.
+
+---
+
+## 🧮 DAX Measures
+Some key measures created:
+- `Total Sales = SUM(Orders[Sales])`
+- `Total Profit = SUM(Orders[Profit])`
+- `Profit Margin % = [Total Profit] / [Total Sales]`
+- `YoY Sales Growth`
+- `Avg Order Value`
+- `On-Time Delivery %`
+- `Return Rate %`
+- `Sales Share %` and `Pareto 80/20`
+
+---
+
+## 📊 Dashboard Overview
+
+### Page 1 – Executive Overview
+KPIs: Total Sales ($2.3M), Profit ($286K), Profit Margin (12%), Orders (5009), On-Time %, Return %  
+Visuals: Monthly Trends, Sales by Region, Profit by Category, Top Products, Sales Map  
 ![Overview](Visuals/page1_overview.png)
 
-### Page 2 – Product & Category Analysis  
+---
+
+### Page 2 – Product & Category Analysis
+Category-wise Profitability, Discount Impact, Top/Bottom 10 Products, Sales vs Profit Scatter  
 ![Products](Visuals/page2_products.png)
 
-### Page 3 – Geography & Operations  
+---
+
+### Page 3 – Geography & Operations
+Regional and City-level breakdown, Delivery Timeliness, Return % by Category  
 ![Geography](Visuals/page3_geo.png)
 
-### Page 4 – Customer Insights  
+---
+
+### Page 4 – Customer Insights
+Customer segmentation, new vs returning users, Pareto 80/20, and top customers  
 ![Customers](Visuals/page4_customers.png)
 
 ---
 
-## 🚀 Key Insights
-- Sales totaled **$2.3M** with an average **12% profit margin**.  
-- **Pareto Analysis:** Top 20% of customers contribute ~48% of sales.  
-- **Furniture Sub-category Chairs** had high sales but negative profit → excessive discounting issue.  
-- **Standard Class shipping** achieved the highest on-time delivery rate.  
-- **California & New York** were the largest contributors to sales, while **Arizona** had unusually high return rates.  
+## 💡 Key Insights
+
+| Area | Insight |
+|------|----------|
+| Sales Performance | Total Sales = **$2.3M** with **12% average profit margin** |
+| Customer Insights | Top 20% customers generate **48% of sales (Pareto principle)** |
+| Profitability | **Furniture (Chairs)** had strong sales but negative profit margins due to over-discounting |
+| Shipping | **Standard Class** achieved the highest on-time rate |
+| Geography | **California & New York** led in sales; **Arizona** had the highest return rate |
 
 ---
 
-## 📌 Files in this Repository
-- `Superstore_Sales_Performance_Dashboard.pbix` → Full interactive dashboard.  
-- `Superstore_sales_data.csv` → Raw dataset.  
-- `Visuals/` → Dashboard screenshots for quick viewing.  
+## 📘 Project Files
+
+| File | Description |
+|------|-------------|
+| `Superstore_Sales_Performance_Dashboard.pbix` | Full interactive Power BI dashboard |
+| `Superstore_sales_data.csv` | Raw dataset used for analysis |
+| `Visuals/` | Screenshots of dashboard pages |
+| `Retail_Superstore_Case_Brief.pdf` | Company-style one-page case brief|
 
 ---
 
-## 🎯 What I Learned
-- Designing dashboards for different audiences (**executives vs analysts**).  
-- Using **visual storytelling** (Pareto analysis, Top/Bottom products).  
-- Applying best practices in **Power Query, Data Modeling, and DAX**.  
-- Importance of **clean data** for accurate insights.  
+## 🧠 Learnings
+- Developed strong understanding of **data modeling and ETL best practices**
+- Created **executive-level dashboards** with performance KPIs and drill-throughs
+- Practiced translating technical metrics into **clear business narratives**
+- Applied **visual storytelling** principles for better insight communication
 
 ---
 
-## 👤 Author
-👨‍💻 Created by **Pawan**    
-📧 Email:[ pawanya28@gmail.com ] 
--🔗 [LinkedIn Profile](www.linkedin.com/in/pawan-yadav-b59826383) 
+## 🧑‍💻 Author
+**Pawan Yadav**  
+Data Analyst | Power BI | SQL | DAX | Data Modeling  
+
+📧 Email: [pawanya28@gmail.com](mailto:pawanya28@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/pawan-yadav-b59826383)
+
+---
+
+> *A complete business intelligence project demonstrating the power of data-driven storytelling and dashboard design for real-world retail decision-making.*
