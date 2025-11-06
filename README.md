@@ -106,10 +106,10 @@ Customer segmentation, new vs returning users, Pareto 80/20, and top customers
 
 | File | Description |
 |------|-------------|
-| `Superstore_Sales_Performance_Dashboard.pbix` | Full interactive Power BI dashboard |
-| `Superstore_sales_data.csv` | Raw dataset used for analysis |
-| `Visuals/` | Screenshots of dashboard pages |
-| `Retail_Superstore_Case_Brief.pdf` | Company-style one-page case brief|
+| [Retail_Superstore_Dashboard.pbix](Retail_Superstore_Dashboard.pbix) | Full interactive Power BI dashboard |
+| [Retail_Superstore_Data.csv](Retail_Superstore_Data.csv) | Raw dataset used for analysis |
+| [Visuals/Retail_Superstore_Dashboard.pdf](Visuals/Retail_Superstore_Dashboard.pdf) | Exported PDF version of Power BI dashboard |
+| [Retail_Superstore_Case_Brief.pdf](Retail_Superstore_Case_Brief.pdf) | Company-style one-page case brief |
 
 ---
 
